@@ -143,7 +143,7 @@ paths:
           maximum: 12
         - in: query
           name: year
-          description: Year (e.g., 2024). Defaults to current year if not provided.
+          description: Year (ex. 2025). Defaults to current year if not provided.
           required: false
           type: integer
       produces:
