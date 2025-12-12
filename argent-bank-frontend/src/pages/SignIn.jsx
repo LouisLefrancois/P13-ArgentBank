@@ -21,18 +21,18 @@ function SignIn() {
     setIsLoading(true);
 
     try {
-      console.log("Tentative de connexion...");
+      // console.log("Tentative de connexion...");
       const loginResponse = await authAPI.login(email, password);
-      console.log("Login response:", loginResponse);
+      // console.log("Login response:", loginResponse);
       const token = loginResponse.body.token;
 
       localStorage.setItem("token", token);
 
       dispatch(loginSuccess({ token }));
 
-      console.log("Récupération du profil...");
+      // console.log("Récupération du profil...");
       const profileResponse = await authAPI.getProfile();
-      console.log("Profile response:", profileResponse);
+      // console.log("Profile response:", profileResponse);
 
       dispatch(
         setUser({
